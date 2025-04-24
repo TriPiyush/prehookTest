@@ -2,14 +2,14 @@ pre-commit:
   parallel: true
   commands:
     prettier:
-      run: npm run prettier
-    tests:
-      run: npm test
+      run: npm run prettier:fix
+    # tests:
+    #   run: npm test
 
 pre-push:
   parallel: true
   commands:
     prettier:
-      run: npm run prettier
+      run: npm run prettier:fix
     tests:
       run: npm test
