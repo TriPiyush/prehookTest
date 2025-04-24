@@ -1,13 +1,22 @@
-const http = require('http');
+// server.js
+const express = require('express');
+const userRoutes = require('./routes/user');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello from server!\n');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+app.use('/user', userRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
 
-const PORT = 3000;
+module.exports = app; // for testing
+ 
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
+
+cocasndsknksnd
+
+
+consoleeee.loc(dsnnd)
