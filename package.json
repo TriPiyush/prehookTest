@@ -1,0 +1,36 @@
+{
+  "name": "prehooks_node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TriPiyush/prehookTest.git"
+  },
+  "keywords": [
+    "prehook"
+  ],
+  "author": "piyush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TriPiyush/prehookTest/issues"
+  },
+  "homepage": "https://github.com/TriPiyush/prehookTest#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.25.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3"
+  },
+  "lint-staged": {
+  "**/*.js": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}
+
+}
