@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "lefthook install",
-    "test": "mocha 'test/**/*.test.js'",
+    "test": "mocha 'test/*.test.js'",
     "lint": "eslint . --ext .js --ignore-path .gitignore",
     "lint-staged": "lint-staged"
   },
