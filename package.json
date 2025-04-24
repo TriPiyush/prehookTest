@@ -25,13 +25,13 @@
     ]
   },
   "lint-staged": {
-  "*.js": [
-    "npx prettier --write",
-    "npx eslint --fix",
-    "npx eslint"
-  ],
-  "*.{json,md,yml}": [
-    "npx prettier --write"
-  ]
-}
+    "*.js": [
+      "npx prettier --write",
+      "npx eslint --fix",
+      "npx eslint"
+    ],
+    "*.{json,md,yml}": [
+      "npx prettier --write"
+    ]
+  }
 }
