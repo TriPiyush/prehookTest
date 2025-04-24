@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      run: npm run prettier
+    tests:
+      run: npm test
+
+pre-push:
+  parallel: true
+  commands:
+    prettier:
+      run: npm run prettier
+    tests:
+      run: npm test
