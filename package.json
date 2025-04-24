@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "lefthook install",
+    "test": "mocha 'test/**/*.test.js'",
+    "lint": "eslint . --ext .js --ignore-path .gitignore",
+    "lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -21,16 +23,19 @@
   "homepage": "https://github.com/TriPiyush/prehookTest#readme",
   "description": "",
   "devDependencies": {
+    "@arkweid/lefthook": "^0.7.7",
+    "chai": "^5.2.0",
     "eslint": "^9.25.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
-    "prettier": "^3.5.3"
+    "mocha": "^11.1.0",
+    "prettier": "^3.5.3",
+    "supertest": "^7.1.0"
   },
   "lint-staged": {
-  "**/*.js": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-}
-
+    "**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }

@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      run: eslint --fix {staged_files}
+      files: git diff --name-only --cached -- '*.js'
+    prettier:
+      run: prettier --write {staged_files}
+      files: git diff --name-only --cached -- '*.js'
+
+pre-push:
+  parallel: true
+  commands:
+    lint-all:
+      run: npm run lint
+    run-tests:
+      run: npm test
