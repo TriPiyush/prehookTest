@@ -13,6 +13,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "eslint": "^9.25.1",
+    "eslint-plugin-spellcheck": "^0.0.20",
     "jest": "^29.7.0",
     "lefthook": "^1.11.11",
     "prettier": "^3.5.3"
@@ -21,5 +23,15 @@
     "testMatch": [
       "**/test.js"
     ]
-  }
+  },
+  "lint-staged": {
+  "*.js": [
+    "npx prettier --write",
+    "npx eslint --fix",
+    "npx eslint"
+  ],
+  "*.{json,md,yml}": [
+    "npx prettier --write"
+  ]
+}
 }
